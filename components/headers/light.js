@@ -54,10 +54,10 @@ export const LogoLink = styled(NavLink)`
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 bg-primary-500 transition duration-300
+  lg:hidden z-20 focus:outline-none hocus:text-primary-500 bg-primary-100 transition duration-300
 `;
 export const MobileNavLinks = motion.custom(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden z-50 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-golfblue-900 bg-primary-100`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }

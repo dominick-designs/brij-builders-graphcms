@@ -9,53 +9,43 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 
 
-
 import React from "react"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
 import Hero from "components/hero/FullWidthWithImage"
-
-// this is google contact form form iframe
-// <p style="text-align: center;"><iframe width="640" height="1171" src="https://docs.google.com/forms/d/e/1FAIpQLScIUS0rJD1UkPshb-72MoFV9UN_m7CnrCAcYwgumFEiXCM_Sg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
-
-export default function About({ pages }) {
-
-    pages = pages[0]
-
-    /* graphcms was returning content.text with space escape characters.
-        This resolves the issue by calling html from graphcms content
-    */
-    const getHTML = function createMarkup() {
-        const returnHTML = <div dangerouslySetInnerHTML={{ __html: pages.content.html }} />
-        return returnHTML
-    }
+import tw from "twin.macro";
+import styled from "styled-components";
+import EmbedIframe from '../helpers/EmbedIframe'
+import { css } from "styled-components/macro"; //eslint-disable-line
+import { ORGANIZATION_NAME } from '../lib/constants'
 
 
+const StyledEmbedIframe = styled(EmbedIframe)`
+  ${tw`rounded`}
+  iframe {
+    ${tw`rounded bg-black shadow-xl`}
+  }
+`;
+
+
+export default function Contact({ url }) {
     return (
         <>
             <Layout >
                 <Head>
-                    <title>Next.js Blog Example with {CMS_NAME}</title>
+                    <title>{ORGANIZATION_NAME}</title>
                 </Head>
-
-                {/* <AnimationRevealPage>
-          <Hero />
-        </AnimationRevealPage> */}
-
                 <Container>
-                    <TwoColSingleFeatureWithStats
-                        title={pages.title}
-                        subtitle={pages.subtitle}
-                        content={getHTML()}
-                    />
+                    <section className="flex-col flex items-center md:justify-between mt-0 ">
+                        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mt-10 md:pr-8">
+                            Use this form to contact {ORGANIZATION_NAME}
+                        </h1>
+                        <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
+                            We will respond ASAP.
+                            </h4>
+                    </section>
+                    <StyledEmbedIframe />
                 </Container>
             </Layout>
         </>
     )
-}
-
-export async function getStaticProps({ }) {
-    const pages = (await getAllPages()) || []
-    return {
-        props: { pages },
-    }
 }

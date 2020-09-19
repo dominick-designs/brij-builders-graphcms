@@ -1,3 +1,10 @@
+# Notes about this website
+
+This is a public website from Brij Builders using Nextjs, GraphCMS and deployed on Vercel. 
+
+
+
+# These are original notes from project that was bootstrapped from graphcms git repo
 # A statically generated blog example using Next.js and GraphCMS
 
 This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using [GraphCMS](https://www.graphcms.com/) as the data source.

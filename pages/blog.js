@@ -8,7 +8,7 @@ import { getAllPages } from '../lib/graphcms'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 
-
+import SectionSeparator from '../components/section-separator'
 
 import React from "react"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
@@ -33,6 +33,8 @@ export default function Blog({ posts, preview }) {
         <Container>
 
           <Intro />
+          <SectionSeparator />
+
           {heroPost && (
             <HeroPost
               title={heroPost.title}
