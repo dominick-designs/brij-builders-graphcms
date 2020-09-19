@@ -28,8 +28,6 @@ export default function About({ pages }) {
         return returnHTML
     }
 
-    console.log(getHTML)
-
     return (
         <>
             <Layout >

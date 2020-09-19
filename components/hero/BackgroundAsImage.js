@@ -7,7 +7,6 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks, defaultLinks } from "../headers/light.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed";
 
-console.log(NavLink)
 
 const StyledHeader = styled(Header)`
   ${tw` max-w-none bg-hitpink-100`}
