@@ -1,5 +1,6 @@
 import Avatar from '../components/avatar'
 import Date from '../components/date'
+import Tags from '../components/tags'
 import CoverImage from '../components/cover-image'
 import Link from 'next/link'
 
@@ -10,6 +11,7 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
+  tags,
 }) {
   return (
     <section>
@@ -25,6 +27,7 @@ export default function HeroPost({
           </h3>
           <div className="mb-4 text-lg md:mb-0">
             <Date dateString={date} />
+            <Tags tags={tags} />
           </div>
         </div>
         <div>

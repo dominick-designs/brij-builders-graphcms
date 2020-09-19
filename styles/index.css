@@ -1,3 +1,20 @@
+/*color scheme
+jazzberry-jam: #c43876;
+rajah: #f6bb6d;
+hit-pink: #f8a580;
+gulf-blue: #031c56;
+*/
+
+/* automatically generate color shades for tailwindcss
+
+https://javisperez.github.io/tailwindcolorshades/#/?Hibiscus=c43876&tv=1
+
+cheatsheet for tailwind
+https://nerdcave.com/tailwind-cheat-sheet
+
+*/
+
+
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;

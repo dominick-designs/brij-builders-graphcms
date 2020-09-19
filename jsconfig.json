@@ -1,5 +1,13 @@
+// original code here
+// {
+//   "compilerOptions": {
+//     "baseUrl": "."
+//   }
+// }
+
 {
   "compilerOptions": {
     "baseUrl": "."
-  }
+  },
+  "include": ["."]
 }
