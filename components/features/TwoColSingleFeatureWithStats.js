@@ -20,9 +20,10 @@ const Image = styled.div(props => [
 ]);
 const TextContent = tw.div`lg:py-8 text-white`;
 
-const Heading = tw(SectionHeading)`text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+const Heading = tw(SectionHeading)`  text-center text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+const Subheading1 = tw(Subheading)` text-secondary-900 text-center text-lg sm:text-xl lg:text-2xl text-center md:text-left leading-tight my-5 mx-5`;
 
-const Description = tw.p` text-left  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-4`
+const Description = tw.p` text-left p-8  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-4`
 
 const Statistics = tw.div`mt-6 lg:mt-8 xl:mt-16 flex flex-wrap`
 const Statistic = tw.div`text-lg sm:text-2xl lg:text-3xl w-1/2 mt-4 lg:mt-10 text-center md:text-left`
@@ -62,7 +63,7 @@ export default ({ textOnLeft = false, title, subtitle, content }) => {
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             <Heading>{title}</Heading>
-            <Subheading>{subtitle}</Subheading>
+            <Subheading1>{subtitle}</Subheading1>
             <Description>{content}</Description>
             {/* <Statistics>
               {statistics.map((statistic, index) => (
