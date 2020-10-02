@@ -1,9 +1,40 @@
+// this was original code 
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // this is from agilitycms nextjs starter
 // This code prevents a flash of unstyled content (FOUT)
 // on load. Without it, the styles are only added once
 // react loads on the frontend
 
-
+/*
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
@@ -33,22 +64,6 @@ export default class MyDocument extends Document {
   }
 }
 
+*/
 
 
-
-// this was original code 
-// import Document, { Html, Head, Main, NextScript } from 'next/document'
-
-// export default class MyDocument extends Document {
-//   render() {
-//     return (
-//       <Html lang="en">
-//         <Head />
-//         <body>
-//           <Main />
-//           <NextScript />
-//         </body>
-//       </Html>
-//     )
-//   }
-// }
