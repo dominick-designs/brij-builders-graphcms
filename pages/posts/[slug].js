@@ -1,20 +1,20 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Container from 'components/container'
-import PostBody from 'components/post-body'
-import MoreStories from 'components/more-stories'
-import Header from 'components/header'
+import Container from 'components/aliveonline/container'
+import PostBody from 'components/aliveonline/post-body'
+import MoreStories from 'components/aliveonline/more-stories'
+import Header from 'components/aliveonline/header'
 import PostHeader from 'components/post-header'
-import SectionSeparator from 'components/section-separator'
-import Layout from 'components/layout'
+import SectionSeparator from 'components/aliveonline/section-separator'
+import Layout from 'components/aliveonline/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
-import PostTitle from 'components/post-title'
+import PostTitle from 'components/aliveonline/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from 'lib/constants'
 
 export default function Post({ post, morePosts, preview }) {
 
-  
+
   const router = useRouter()
 
   if (!router.isFallback && !post?.slug) {
@@ -32,7 +32,7 @@ export default function Post({ post, morePosts, preview }) {
               <article>
                 <Head>
                   <title>
-                    {post.title} | Next.js Blog Example with {CMS_NAME}
+                    {post.title} | Brij Builders Content {CMS_NAME}
                   </title>
                   {/* <meta property="og:image" content={post.ogImage.url} /> */}
                 </Head>

@@ -8,7 +8,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler";
 
 // import logo from "../../images/logo.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
-import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import { ReactComponent as CloseIcon } from "node_modules/feather-icons/dist/icons/x.svg";
 import { ORGANIZATION_NAME, ORGANIZATION_LOGO_IMAGE512, ORGANIZATION_LOGO_IMAGE128, ORGANIZATION_LOGO_IMAGE128x2 } from '../../lib/constants'
 
 

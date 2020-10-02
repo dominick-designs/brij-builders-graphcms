@@ -1,8 +1,8 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import TwoColSingleFeatureWithStats from '../components/features/TwoColSingleFeatureWithStats'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
+import Container from '../components/aliveonline/container'
+import MoreStories from '../components/aliveonline/more-stories'
+import TwoColSingleFeatureWithStats from '../components/aliveonline/TwoColSingleFeatureWithStats'
+import Intro from '../components/aliveonline/intro'
+import Layout from '../components/aliveonline/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import { getAllPages } from '../lib/graphcms'
 import Head from 'next/head'
@@ -11,7 +11,7 @@ import { CMS_NAME } from '../lib/constants'
 
 import React from "react"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
-import Hero from "components/hero/FullWidthWithImage"
+import Hero from "components/aliveonline/FullWidthWithImage"
 import tw from "twin.macro";
 import styled from "styled-components";
 import EmbedIframe from '../helpers/EmbedIframe'

@@ -1,7 +1,7 @@
 /* A simple iframe wrapper that makes 16:9 responsive embed */
 import React from 'react';
 import tw from "twin.macro";
-import SectionSeparator from '../components/section-separator'
+import SectionSeparator from '../components/aliveonline/section-separator'
 
 export default ({ url }) => {
   // this is google contact form form iframe

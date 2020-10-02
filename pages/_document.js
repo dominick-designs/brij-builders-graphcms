@@ -3,6 +3,7 @@
 // on load. Without it, the styles are only added once
 // react loads on the frontend
 
+
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
