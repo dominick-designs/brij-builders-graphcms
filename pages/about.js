@@ -32,7 +32,7 @@ export default function About({ pages }) {
         <>
             <Layout >
                 <Head>
-                    <title>Next.js Blog Example with {CMS_NAME}</title>
+                    <title>About Brij Builders {CMS_NAME}</title>
                 </Head>
 
                 {/* <AnimationRevealPage>

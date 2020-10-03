@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Link from 'next/link'
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-export const Bridge = "/brij-builders-nature/brij-builders-images-6.jpg";
+export const Bridge = "/brij-builders-nature-1200/brij-builders-1200-06.jpg";
 
 
 

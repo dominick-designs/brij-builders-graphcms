@@ -8,7 +8,7 @@ import { Subheading } from "components/aliveonline/Headings.js";
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const ImageColumn = tw(Column)`md:w-6/12 lg:w-5/12 flex-shrink-0 h-80 md:h-auto`;
+const ImageColumn = tw(Column)`md:w-6/12 lg:w-5/12 flex-shrink-0 h-80 md:h-80`;
 const TextColumn = styled(Column)(props => [
   tw`md:w-6/12 mt-8 md:mt-0`,
   props.textOnLeft ? tw`md:mr-8 lg:mr-16 md:order-first` : tw`md:ml-8 lg:ml-16 md:order-last`
@@ -18,12 +18,28 @@ const Image = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`rounded bg-cover bg-center h-full`,
 ]);
-const TextContent = tw.div`lg:py-8 text-white`;
+const TextContent = tw.div`lg:py-8 text-white `;
 
-const Heading = tw(SectionHeading)`  text-center text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+
+const Heading = tw(SectionHeading)`text-center text-3xl sm:text-4xl lg:text-5xl text-center md:text-center leading-tight`;
 const Subheading1 = tw(Subheading)` text-secondary-900 text-center text-lg sm:text-xl lg:text-2xl text-center md:text-left leading-tight my-5 mx-5`;
 
-const Description = tw.p` text-left p-8  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-4`
+const Description = tw.p`text-left p-8  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-4`
+
+
+const BaseStyles = tw`text-left p-8  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-4`
+
+const ChildrenStyles = css({
+  h2: tw`text-secondary-900 text-center text-lg sm:text-xl lg:text-2xl text-center md:text-left leading-tight my-5 mx-5`,
+
+
+  img: tw`object-right mt-10 mb-5 border-2 border-golfblue-300 object-center sm:object-center md:object-right lg:object-bottom xl:object-left`,
+  // and you can include advanced css selectors
+  '> img + img': tw`mt-10 border-4 border-primary-700 text-center`,
+  'img + &': tw`mt-10 border-4 border-primary-700 text-center`,
+})
+
+const RichText = styled.div(() => [BaseStyles, ChildrenStyles])
 
 const Statistics = tw.div`mt-6 lg:mt-8 xl:mt-16 flex flex-wrap`
 const Statistic = tw.div`text-lg sm:text-2xl lg:text-3xl w-1/2 mt-4 lg:mt-10 text-center md:text-left`
@@ -58,24 +74,32 @@ export default ({ textOnLeft = false, title, subtitle, content }) => {
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc="https://images.unsplash.com/photo-1582564286939-400a311013a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80" />
+          <Image imageSrc="/brij-builders-nature/brij-builders-images-6.jpg" />
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
+
           <TextContent>
             <Heading>{title}</Heading>
             <Subheading1>{subtitle}</Subheading1>
-            <Description>{content}</Description>
+            <RichText>
+              <Description >{content}</Description>
+            </RichText>
             {/* <Statistics>
               {statistics.map((statistic, index) => (
                 <Statistic key={index}>
-                  <Value>{statistic.value}</Value>
-                  <Key>{statistic.key}</Key>
+                <Value>{statistic.value}</Value>
+                <Key>{statistic.key}</Key>
                 </Statistic>
-              ))}
-            </Statistics> */}
+                ))}
+              </Statistics> */}
           </TextContent>
+
+
         </TextColumn>
       </TwoColumn>
-    </Container>
+    </Container >
   );
 };
+
+
+
