@@ -91,11 +91,11 @@ export default ({ landingPageUrl }) => {
         <HeroContainer>
           <TwoColumn>
             <LeftColumn>
-              <Notification>Connecting to the heart of things</Notification>
+              {/* <Notification>Connecting to the heart of things</Notification> */}
               <Heading>
                 <span>Brij Builders</span>
                 <br />
-                <SlantedBackground>Question Reality</SlantedBackground>
+                <SlantedBackground>Connecting to the heart of things</SlantedBackground>
               </Heading>
               <Link href="/contact">
                 <PrimaryAction>Watch Our Videos</PrimaryAction>

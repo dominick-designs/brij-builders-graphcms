@@ -54,7 +54,7 @@ export default ({ }) => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2020, Bhaktivedanta Presentations. All Rights Reserved.
+            &copy; Copyright 2020, BV Presentations. All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>

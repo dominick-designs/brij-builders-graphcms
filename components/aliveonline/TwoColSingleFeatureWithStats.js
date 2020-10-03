@@ -26,20 +26,22 @@ const Subheading1 = tw(Subheading)` text-secondary-900 text-center text-lg sm:te
 
 const Description = tw.p`text-left p-8  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-4`
 
+// with help from developer of twin.macro
+// https://github.com/ben-rogerson/twin.macro/discussions/157#discussioncomment-89799
 
 const BaseStyles = tw`text-left p-8  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-4`
 
 const ChildrenStyles = css({
-  h2: tw`text-secondary-900 text-center text-lg sm:text-xl lg:text-2xl text-center md:text-left leading-tight my-5 mx-5`,
+  h2: tw`text-secondary-900 text-center text-lg sm:text-xl lg:text-2xl text-center md:text-center leading-tight my-5 mx-5 mb-5`,
+  'p img': tw`mt-10 mb-10`,
 
-
-  img: tw`object-right mt-10 mb-5 border-2 border-golfblue-300 object-center sm:object-center md:object-right lg:object-bottom xl:object-left`,
+  img: tw` m-auto`,
   // and you can include advanced css selectors
   '> img + img': tw`mt-10 border-4 border-primary-700 text-center`,
   'img + &': tw`mt-10 border-4 border-primary-700 text-center`,
 })
 
-const RichText = styled.div(() => [BaseStyles, ChildrenStyles])
+const RichText = styled.div(() => [BaseStyles, ChildrenStyles, Description])
 
 const Statistics = tw.div`mt-6 lg:mt-8 xl:mt-16 flex flex-wrap`
 const Statistic = tw.div`text-lg sm:text-2xl lg:text-3xl w-1/2 mt-4 lg:mt-10 text-center md:text-left`
