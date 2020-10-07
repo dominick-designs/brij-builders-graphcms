@@ -6,12 +6,12 @@ import { SectionHeading } from "components/aliveonline/Headings.js";
 import { Subheading } from "components/aliveonline/Headings.js";
 
 const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
+const TwoColumn = tw.div`flex flex-col  justify-between max-w-screen-md mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const ImageColumn = tw(Column)`md:w-6/12 lg:w-5/12 flex-shrink-0 h-80 md:h-80`;
+const ImageColumn = tw(Column)` flex-shrink-0 h-80 md:h-80`;
 const TextColumn = styled(Column)(props => [
-  tw`md:w-6/12 mt-8 md:mt-0`,
-  props.textOnLeft ? tw`md:mr-8 lg:mr-16 md:order-first` : tw`md:ml-8 lg:ml-16 md:order-last`
+  tw`md:w-full mt-8 md:mt-0`,
+  props.textOnLeft ? tw`md:mr-8 lg:mr-16 md:order-first` : tw`md:ml-auto md:order-last`
 ]);
 
 const Image = styled.div(props => [

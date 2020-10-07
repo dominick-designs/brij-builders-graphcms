@@ -9,7 +9,6 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 
 
-
 import React from "react"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
 import Hero from "components/aliveonline/FullWidthWithImage"
