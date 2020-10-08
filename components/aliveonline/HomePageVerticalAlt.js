@@ -45,17 +45,17 @@ export default () => {
     {
       imageSrc:
         "/brij-builders-nature/brij-builders-images-6.jpg",
-      subtitle: "Paid",
+      subtitle: "Brij Builders",
       title: "About",
       description:
-        "We are a group of volunteers who are constructing a bridge which links consciousness with the heart of things.",
+        "Brij Builders explores the potential of the world within us, the nature of the world around us, and the mystery behind it all. It is our hope to create bridges that unite people in curiosity, reflection, and discussion. If we inspire even one person's life journey, we will consider ourselves successful.",
       url: "/about"
     },
 
     {
       imageSrc:
         "/brij-builders-nature/brij-builders-images-5.jpg",
-      subtitle: "Free",
+      subtitle: "Brij Builders",
       title: "Blog",
       description:
         "Read, watch, and laugh as we bridge the gap between reality and consciousness",
@@ -65,7 +65,7 @@ export default () => {
     {
       imageSrc:
         "/brij-builders-nature/brij-builders-images-1.jpg",
-      subtitle: "Exclusive",
+      subtitle: "Brij Builders",
       title: "Contact",
       description:
         "Feel free to contact us.",
