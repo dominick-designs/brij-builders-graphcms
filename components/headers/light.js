@@ -9,7 +9,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler";
 // import logo from "../../images/logo.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "node_modules/feather-icons/dist/icons/x.svg";
-import { ORGANIZATION_NAME, ORGANIZATION_LOGO_IMAGE512, ORGANIZATION_LOGO_IMAGE128, ORGANIZATION_LOGO_IMAGE128x2 } from '../../lib/constants'
+import { ORGANIZATION_NAME, ORGANIZATION_LOGO_IMAGE512, ORGANIZATION_LOGO_IMAGE128, ORGANIZATION_LOGO_IMAGEBRIDGE } from '../../lib/constants'
 
 
 const Header = tw.header`
@@ -44,7 +44,7 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! pl-4 pt-2 pb-2`};
 
   img { 
     ${tw`w-28 mr-3`}  
@@ -98,7 +98,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src={ORGANIZATION_LOGO_IMAGE128x2} alt={ORGANIZATION_NAME} />
+      <img src={ORGANIZATION_LOGO_IMAGEBRIDGE} alt={ORGANIZATION_NAME} />
       {ORGANIZATION_NAME}
     </LogoLink>
   );
